@@ -173,7 +173,41 @@
 
 
   </dependencies>
-
+  <repositories>
+    <repository>
+      <id>osc</id>
+      <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+    </repository>
+    <repository>
+      <id>osc_thirdparty</id>
+      <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>osc</id>
+      <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+    </pluginRepository>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <finalName>Seckill</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
