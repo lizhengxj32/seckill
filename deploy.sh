@@ -6,9 +6,8 @@
 # 输入你的环境上tomcat的全路径
 # export TOMCAT_APP_PATH=tomcat在部署机器上的路径
 ### base 函数
-killTomcat()
-{
-    pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
+killTomcat(){
+pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
     echo "tomcat Id list :$pid"
     if [ "$pid" = "" ]
     then
@@ -37,6 +36,3 @@ mv Seckill.war ROOT.war
 # 启动Tomcat
 cd $TOMCAT_APP_PATH/
 sh bin/startup.sh
-
-:set fileformat=unix
-
