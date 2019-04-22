@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #编译+部署order站点
 #需要配置如下参数
 # 项目路径, 在Execute Shell中配置项目路径, pwd 就可以获得该项目路径
@@ -33,4 +33,4 @@ cd $TOMCAT_APP_PATH/bin/
 sh ./startup.sh
 
 
-:set fileformat=dos
+:set fileformat=unix
