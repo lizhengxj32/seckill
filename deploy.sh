@@ -31,3 +31,6 @@ mv Seckill.war ROOT.war
 # 启动Tomcat
 cd $TOMCAT_APP_PATH/bin/
 sh ./startup.sh
+
+
+:set fileformat=unix
