@@ -17,20 +17,3 @@ pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
     fi
 }
 cd $PROJ_PATH/Seckill
-mvn clean install
-# 停tomcat
-killTomcat
-# 删除原有工程
-rm -rf $TOMCAT_APP_PATH/webapps/ROOT
-rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
-rm -f $TOMCAT_APP_PATH/webapps/Seckill.war
-# 复制新的工程
-cp $PROJ_PATH/Seckill/target/Seckill.war $TOMCAT_APP_PATH/webapps/
-cd $TOMCAT_APP_PATH/webapps/
-mv Seckill.war ROOT.war
-# 启动Tomcat
-cd $TOMCAT_APP_PATH/bin/
-sh ./startup.sh
-
-
-:set fileformat=unix
