@@ -41,5 +41,5 @@ mv Seckill.war ROOT.war
 cd $TOMCAT_APP_PATH/
 sh bin/startup.sh
 
-
+:set fileformat=unix
 
