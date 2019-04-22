@@ -10,9 +10,7 @@
 cd $PROJ_PATH/Seckill
 mvn clean install
 # 停tomcat
-killTomcat
 # 删除原有工程
-rm -f $TOMCAT_APP_PATH/webapps/Seckill.war
 # 复制新的工程
 cp $PROJ_PATH/Seckill/target/Seckill.war $TOMCAT_APP_PATH/webapps/
 
