@@ -6,22 +6,22 @@
 # 输入你的环境上tomcat的全路径
 # export TOMCAT_APP_PATH=tomcat在部署机器上的路径
 ### base 函数
-killTomcat()
-{
-    pid=`ps -ef|grep tomcat|grep java`
-    echo "tomcat Id list :$pid"
-    if [ "$pid" = "" ]
-    then
-      echo "no tomcat pid alive"
-    else
-      kill -9 $pid
-    fi
-}
+#killTomcat()
+#{
+#    pid=`ps -ef|grep tomcat|grep java`
+#    echo "tomcat Id list :$pid"
+#    if [ "$pid" = "" ]
+#    then
+#      echo "no tomcat pid alive"
+#   else
+#      kill -9 $pid
+#    fi
+#}
 cd $PROJ_PATH/Seckill
 mvn clean install
  
 # 停tomcat
-killTomcat
+#killTomcat
  
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/webapps/ROOT
