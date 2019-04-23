@@ -6,17 +6,17 @@
 # M-hM->M-^SM-eM-^EM-%M-dM-=M- M-gM-^ZM-^DM-gM-^NM-/M-eM-"M-^CM-dM-8M-^JtomcatM-gM-^ZM-^DM-eM-^EM-(M-hM-7M-/M-eM->M-^D
 # export TOMCAT_APP_PATH=tomcatM-eM-^\M-(M-iM-^CM-(M-gM-=M-2M-fM-^\M-:M-eM-^YM-(M-dM-8M-^JM-gM-^ZM-^DM-hM-7M-/M-eM->M-^D
 ### base M-eM-^GM-=M-fM-^UM-0
-#killTomcat()
-#{
-#    pid=`ps -ef|grep tomcat|grep java`
-#    echo "tomcat Id list :$pid"
-#    if [ "$pid" = "" ]
-#    then
-#      echo "no tomcat pid alive"
-#   else
-#      kill -9 $pid
-#    fi
-#}
+killTomcat()
+{
+    pid=`ps -ef|grep tomcat|grep java`
+    echo "tomcat Id list :$pid"
+    if [ "$pid" = "" ]
+    then
+      echo "no tomcat pid alive"
+   else
+      kill -9 $pid
+    fi
+}
 cd $PROJ_PATH/Seckill
 mvn clean install
  
